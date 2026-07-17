@@ -13,7 +13,7 @@ def add_student(student_id, name, age):
         "age": age
     }
 
-    return "Student added successfully."
+    return "Student added."
 
 def remove_student(student_id):
     if student_id not in students:
