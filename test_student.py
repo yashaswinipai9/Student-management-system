@@ -3,7 +3,8 @@ from student import (
     add_student,
     remove_student,
     search_student,
-    update_student
+    update_student,
+    export_students
 )
 
 def setup_function():
@@ -80,3 +81,13 @@ def test_verify_updated_student():
 
     assert result["name"] == "Rahul Sharma"
     assert result["age"] == 22
+
+def test_export_students():
+    add_student(101, "Rahul", 20)
+    add_student(102, "Priya", 21)
+
+    result = export_students()
+
+    assert len(result) == 2
+    assert result[101]["name"] == "Rahul"
+    assert result[102]["name"] == "Priya"
