@@ -24,10 +24,14 @@ def remove_student(student_id):
     return "Student removed successfully."
 
 def search_student(student_id):
-    if student_id in students:
-        return students[student_id]
+    """
+    Searches for a student by ID.
+    Returns the student details if found,
+    otherwise returns 'Student not found.'
+    """
 
-    return "Student not found."
+    return students.get(student_id, "Student not found.")
+   
 
 def update_student(student_id, name, age):
     if student_id not in students:
