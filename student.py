@@ -41,3 +41,9 @@ def update_student(student_id, name, age):
     students[student_id]["age"] = age
 
     return "Student updated successfully."
+
+def export_students():
+    """
+    Returns all student records.
+    """
+    return students
