@@ -15,3 +15,10 @@ def add_student(student_id, name, age):
 
     return "Student added successfully."
 
+def remove_student(student_id):
+    if student_id not in students:
+        return "Student not found."
+
+    del students[student_id]
+
+    return "Student removed successfully."
