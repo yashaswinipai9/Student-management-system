@@ -28,3 +28,12 @@ def search_student(student_id):
         return students[student_id]
 
     return "Student not found."
+
+def update_student(student_id, name, age):
+    if student_id not in students:
+        return "Student not found."
+
+    students[student_id]["name"] = name
+    students[student_id]["age"] = age
+
+    return "Student updated successfully."
