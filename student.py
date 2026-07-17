@@ -22,3 +22,9 @@ def remove_student(student_id):
     del students[student_id]
 
     return "Student removed successfully."
+
+def search_student(student_id):
+    if student_id in students:
+        return students[student_id]
+
+    return "Student not found."
